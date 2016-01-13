@@ -81,6 +81,8 @@ namespace UnityTest
                     DrawCompareToType(script.Action as ComparerBase);
                 }
             }
+            if(GUI.changed)
+                EditorApplication.MarkSceneDirty();
         }
 
         private void DrawOptionsForAfterPeriodOfTime(AssertionComponent script)

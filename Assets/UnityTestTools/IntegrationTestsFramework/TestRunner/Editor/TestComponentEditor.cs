@@ -101,7 +101,7 @@ namespace UnityTest
 
             if (!component.dynamic)
                 serializedObject.ApplyModifiedProperties();
-            if(GUI.changed)
+            if (GUI.changed)
                 EditorApplication.MarkSceneDirty();
         }
 
