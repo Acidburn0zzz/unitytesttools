@@ -306,7 +306,7 @@ namespace UnityTest
 
 
             TestSceneNumber += 1;
-            string testScene = m_Configurator.GetIntegrationTestScenes (TestSceneNumber);
+            string testScene = m_Configurator.GetIntegrationTestScenes(TestSceneNumber);
 
             if (testScene != null)
                 Application.LoadLevel(Path.GetFileNameWithoutExtension(testScene));
@@ -314,6 +314,15 @@ namespace UnityTest
             {
                 TestRunnerCallback.AllScenesFinished();
                 k_ResultRenderer.ShowResults();
+
+#if UNITY_EDITOR
+                var prevScenes = m_Configurator.GetPreviousScenesToRestore();
+                if(prevScenes!=null)
+                {
+                    UnityEditor.EditorBuildSettings.scenes = prevScenes;
+                }
+#endif
+
                 if (m_Configurator.isBatchRun && m_Configurator.sendResultsOverNetwork)
                     Application.Quit();
             }
