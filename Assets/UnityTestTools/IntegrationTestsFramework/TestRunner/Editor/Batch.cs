@@ -102,6 +102,7 @@ namespace UnityTest
 
             var settings = new PlayerSettingConfigurator(true);
             settings.AddConfigurationFile(TestRunnerConfigurator.integrationTestsNetwork, string.Join("\n", config.GetConnectionIPs()));
+            settings.AddConfigurationFile(TestRunnerConfigurator.testScenesToRun, string.Join ("\n", testScenes.ToArray()));
 
             NetworkResultsReceiver.StartReceiver(config);
 
