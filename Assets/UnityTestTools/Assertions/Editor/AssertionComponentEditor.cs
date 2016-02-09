@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection;
 using UnityEditor;
 using UnityEngine;
+using UnityEditor.SceneManagement;
 
 namespace UnityTest
 {
@@ -82,7 +83,7 @@ namespace UnityTest
                 }
             }
             if(GUI.changed)
-                EditorApplication.MarkSceneDirty();
+                EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
         }
 
         private void DrawOptionsForAfterPeriodOfTime(AssertionComponent script)
