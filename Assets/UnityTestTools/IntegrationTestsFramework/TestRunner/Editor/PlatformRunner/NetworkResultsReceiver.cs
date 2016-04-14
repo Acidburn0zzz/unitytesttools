@@ -167,9 +167,9 @@ namespace UnityTest
             }
             if (m_RunFinished)
             {
+                Close();
                 if (InternalEditorUtility.inBatchMode)
                     EditorApplication.Exit(m_TestFailed ? Batch.returnCodeTestsFailed : Batch.returnCodeTestsOk);
-                Close();
             }
             if (m_Repaint) Repaint();
         }
