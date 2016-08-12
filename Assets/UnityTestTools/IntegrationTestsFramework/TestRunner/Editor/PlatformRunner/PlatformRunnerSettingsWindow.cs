@@ -35,7 +35,7 @@ namespace UnityTest.IntegrationTests
 
         readonly GUIContent m_Label = new GUIContent("Results target directory", "Directory where the results will be saved. If no value is specified, the results will be generated in project's data folder.");
         
-        public PlatformRunnerSettingsWindow()
+        void Awake()
         {
             if (m_OtherScenesToBuild == null)
                 m_OtherScenesToBuild = new List<string> ();
