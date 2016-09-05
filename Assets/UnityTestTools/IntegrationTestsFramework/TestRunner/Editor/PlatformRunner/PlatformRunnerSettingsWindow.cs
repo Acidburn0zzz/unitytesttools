@@ -115,7 +115,7 @@ namespace UnityTest.IntegrationTests
 
                     // All Scenes
                     EditorGUILayout.BeginVertical ();
-                    label = new GUIContent("Availble Scenes", "These are all the scenes within your project, please select some to run tests");
+                    label = new GUIContent("Available Scenes", "These are all the scenes within your project, please select some to run tests");
                     EditorGUILayout.LabelField(label, EditorStyles.boldLabel, GUILayout.Height(20f));
 
             
