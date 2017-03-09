@@ -1,5 +1,5 @@
-# DEPRECATED #
-## This package will not be supported anymore. We introduced an integrated test runner in Unity 5.6 and will focus on developing it. ##
+**# DEPRECATED #
+## This package will not be supported anymore. We introduced an integrated test runner in Unity 5.6 and will focus on developing it. ##**
 
 Unity Test Tools
 ========
